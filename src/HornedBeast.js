@@ -10,15 +10,15 @@ class HornedBeast extends React.Component{
         }
     } 
 
-
     incrementCount = () => {
         this.setState({ count: this.state.count + 1 });
     }
+   
     render(){
         return (
-                <Card style={{fontFamily: 'Metal Mania', width: '40rem', marginTop: '5rem' }}>
+                <Card style={{fontFamily: 'Metal Mania', width: '30rem', marginTop: '5rem' }}>
                 <Card.Img Variant='top' src={this.props.src} alt={this.props.alt} title={this.props.title} /> 
-                    <Card.Body style={{background: "url('./img/skulls.jpeg') no-repeat", backgroundSize:'cover',}}>
+                    <Card.Body style={{background: "url('./img/skulls.jpeg') no-repeat", backgroundSize:'cover', backgroundAttachment: 'fixed'}}>
                     <Card.Title style={{fontSize:'300%',color:'white'}}>{this.props.title}</Card.Title>
                     <Card.Text style={{color:'white'}}>{this.props.description}</Card.Text>
                     <Card.Text style={{color:'white'}}>Horns: {this.props.horns}</Card.Text>
