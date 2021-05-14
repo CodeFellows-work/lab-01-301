@@ -35,12 +35,13 @@ class FormHorn extends React.Component{
                     this.props.setSearchHorns(e.target.value);
                     this.handleHorns(e); }} 
                     as='select'>
+                    <option>0</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>100</option>
                 </Form.Control>
-                <Button onClick={this.handleSubmit}>Submit</Button>
+                
             </Form>
         )
     }

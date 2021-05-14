@@ -31,7 +31,6 @@ setSearchHorns = (search) => {
 }
 filterDataForHorns = () => {
   const filterBeastHorns = (beast) => {
-    console.log(beast.horns, this.state.searchHorns);
     if(beast.horns === parseInt(this.state.searchHorns)){
       return true;
     }
@@ -39,14 +38,17 @@ filterDataForHorns = () => {
   }
   if(this.state.searchHorns){
     this.setState({data: this.state.data.filter(filterBeastHorns) });
-  } else {
-    this.setState({data: beast}); 
   }
+  if(this.state.searchHorns === '0'){
+    this.setState({data: beast});
+  } 
+  // } else {
+  //   this.setState({data: beast}); 
+  // }
 }
 
 filterData = () => {
   const filterBeasts = (beast) => {
-    console.log(beast.title, this.state.searchTitle);
     if (beast.title.toLowerCase().includes(this.state.searchTitle.toLowerCase())) {
       return true;
     }
@@ -60,7 +62,7 @@ filterData = () => {
   if (this.state.searchTitle) {
     this.setState({ data: this.state.data.filter(filterBeasts) });
   } else {
-    this.setState({ data: beast });
+    this.setState({data: beast});
   }
 }
     render(){
