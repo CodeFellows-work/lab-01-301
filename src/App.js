@@ -6,6 +6,7 @@ import Main from './Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import beast from './beast.json';
 import FormHorn from './FormHorn';
+import ModaBeast from './ModaBeast'
 
 class App extends React.Component {
     
@@ -73,7 +74,8 @@ filterData = () => {
         <div id='app' >
         <Header/>
         <FormHorn setSearchHorns={this.setSearchHorns} setSearch={this.setSearch}/>
-        <Main data={this.state.data} selectBeast={this.selectBeast}/> 
+        <Main data={this.state.data}/> 
+        <ModaBeast data={this.state.data}/> 
         <Footer />
         </div>
       );

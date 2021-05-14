@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeast from './HornedBeast'; 
-
+import ModaBeast from './ModaBeast'; 
 
 
 class Main extends React.Component{
@@ -18,7 +18,7 @@ class Main extends React.Component{
                    src={item.image_url}
                    alt={item.keyword}
                    description={item.description}
-                   horns={item.horns} />})}
+                   horns={item.horns} />})} 
 
             </div>
         )
