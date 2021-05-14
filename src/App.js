@@ -19,16 +19,16 @@ class App extends React.Component {
 
   }
 }
-// selectBeast = (beast) => {
-//   this.setState({ selectedBeast: beast });
-// }
 
+// Will search for the beast that matches the user input
 setSearch = (search) => {
   this.setState({ searchTitle: search }, this.filterData); 
 }
+// Will search for the beast with the mathing horns the user inputs from drop down menu 
 setSearchHorns = (search) => {
   this.setState({searchHorns: search}, this.filterDataForHorns); 
 }
+//filter through the beast data and only return the number of horns that user inputs 
 filterDataForHorns = () => {
   const filterBeastHorns = (beast) => {
     if(beast.horns === parseInt(this.state.searchHorns)){
@@ -36,9 +36,11 @@ filterDataForHorns = () => {
     }
     return false;
   }
+  // this will render the data onto the page 
   if(this.state.searchHorns){
     this.setState({data: this.state.data.filter(filterBeastHorns) });
   }
+  // this is a temporary reset button and when '0' is chosen in drop down, all data will return to original state on page
   if(this.state.searchHorns === '0'){
     this.setState({data: beast});
   } 
@@ -47,6 +49,7 @@ filterDataForHorns = () => {
   // }
 }
 
+// Filtering out data through user input in the search box
 filterData = () => {
   const filterBeasts = (beast) => {
     if (beast.title.toLowerCase().includes(this.state.searchTitle.toLowerCase())) {
@@ -58,7 +61,7 @@ filterData = () => {
     return false;
     }
   }
-
+// will render the data onto the page as well as reset back to original state when there are no words 
   if (this.state.searchTitle) {
     this.setState({ data: this.state.data.filter(filterBeasts) });
   } else {

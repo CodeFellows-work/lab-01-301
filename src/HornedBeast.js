@@ -9,11 +9,11 @@ class HornedBeast extends React.Component{
             count: 0,
         }
     } 
-
+    // counter function for the like button 
     incrementCount = () => {
         this.setState({ count: this.state.count + 1 });
     }
-   
+   // will render the cards for each beast 
     render(){
         return (
                 <Card style={{fontFamily: 'Metal Mania', width: '30rem', marginTop: '5rem' }}>
