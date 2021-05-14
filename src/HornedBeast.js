@@ -32,7 +32,7 @@ class HornedBeast extends React.Component{
                     <Card.Text style={{fontSize:'200%', color:'white'}}><img src='./img/Heart.png' alt='bloody heart' width='20' /> {this.state.count}</Card.Text>
                     <DisplayButton callback={this.incrementCount} /> 
                     <ModaBeast title={this.props.title}
-                        src={this.props.image_url}
+                        src={this.props.src}
                         alt={this.props.keyword}
                         description={this.props.description}
                         horns={this.props.horns} /> 

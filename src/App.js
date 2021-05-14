@@ -75,7 +75,6 @@ filterData = () => {
         <Header/>
         <FormHorn setSearchHorns={this.setSearchHorns} setSearch={this.setSearch}/>
         <Main data={this.state.data}/> 
-        <ModaBeast data={this.state.data}/> 
         <Footer />
         </div>
       );
