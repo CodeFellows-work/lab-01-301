@@ -10,18 +10,20 @@ class FormHorn extends React.Component{
             hornNumber: 0,
         }
     }
+    // this is a handler for the words that are input 
     handleKeyword = (e) => {
         let value = e.target.value;
         this.setState({ searchKeyword: value });
       }
+    // this is the handler for the horns that are chosen through drop down 
     handleHorns = (e) => {
         let value = e.target.value; 
         this.setState({searchHorns: value })
     }
-    handleSubmit = (e) => {
-        console.log(this.state.hornNumber) 
-    }
-    // rendering method
+    // handleSubmit = (e) => {
+    //     console.log(this.state.hornNumber) 
+    // }
+    // this will render the Forms that are towards the top of the page 
     render (){
         return( 
             <Form> 
@@ -35,12 +37,13 @@ class FormHorn extends React.Component{
                     this.props.setSearchHorns(e.target.value);
                     this.handleHorns(e); }} 
                     as='select'>
+                    <option>0</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>100</option>
                 </Form.Control>
-                <Button onClick={this.handleSubmit}>Submit</Button>
+                
             </Form>
         )
     }
