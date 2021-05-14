@@ -21,6 +21,7 @@ class FormHorn extends React.Component{
     handleSubmit = (e) => {
         console.log(this.state.hornNumber) 
     }
+    // rendering method
     render (){
         return( 
             <Form> 
