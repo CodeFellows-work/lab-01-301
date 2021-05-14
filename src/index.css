@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 body {
   background: url("./hell.jpeg");
+  background-attachment: fixed;
   background-size:contain;
   /* margin: 0; */
   display: flex; 
   justify-content: center;
   font-family: 'Metal Mania', cursive;
 }
-header{
-  color: white;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
